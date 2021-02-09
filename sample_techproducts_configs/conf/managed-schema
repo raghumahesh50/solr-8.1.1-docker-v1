@@ -198,7 +198,16 @@
    
    <dynamicField name="*_i"  type="pint"    indexed="true"  stored="true"/>
    <dynamicField name="*_is" type="pint"    indexed="true"  stored="true"  multiValued="true"/>
-   <dynamicField name="*_s"  type="string"  indexed="true"  stored="true" />
+   <dynamicField name="*_s"  type="string"  indexed="true"  stored="true">
+    <analyzer type="index">
+        <tokenizer class="solr.WhitespaceTokenizerFactory"/>
+        <filter class="solr.LowerCaseFilterFactory"/>
+      </analyzer>
+      <analyzer type="query">
+        <tokenizer class="solr.WhitespaceTokenizerFactory"/>
+        <filter class="solr.LowerCaseFilterFactory"/>
+      </analyzer>
+    </fieldType>
    <dynamicField name="*_s_ns"  type="string"  indexed="true"  stored="false" />
    <dynamicField name="*_ss" type="string"  indexed="true"  stored="true" multiValued="true"/>
    <dynamicField name="*_l"  type="plong"   indexed="true"  stored="true"/>
