@@ -203,7 +203,7 @@
         <tokenizer class="solr.WhitespaceTokenizerFactory"/>
         <filter class="solr.LowerCaseFilterFactory"/>
       </analyzer>
-    </fieldType>
+    </dynamicField>
    <dynamicField name="*_s_ns"  type="string"  indexed="true"  stored="false" />
    <dynamicField name="*_ss" type="string"  indexed="true"  stored="true" multiValued="true"/>
    <dynamicField name="*_l"  type="plong"   indexed="true"  stored="true"/>
