@@ -289,12 +289,7 @@
     -->
 
     <!-- The StrField type is not analyzed, but indexed/stored verbatim. -->
-    <fieldType name="string" class="solr.StrField" sortMissingLast="true" docValues="true">
-      <analyzer type="query">
-        <tokenizer class="solr.WhitespaceTokenizerFactory"/>
-        <filter class="solr.LowerCaseFilterFactory"/>
-      </analyzer>
-    </fieldType>
+    <fieldType name="string" class="solr.StrField" sortMissingLast="true" docValues="true"/>
     <!-- boolean type: "true" or "false" -->
     <fieldType name="boolean" class="solr.BoolField" sortMissingLast="true"/>
 
